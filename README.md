@@ -2,9 +2,13 @@
 
 This repository holds the socially impactful open-source projects listed on https://meaningfulcode.org.
 
+The frontend source code can be found at https://github.com/Meaningful-Code/meaningfulcode-frontend.
+
 ## Contributing
 
-Do you have impactful project? Awesome! Feel free to create a pull request editing this `README.md` file, adding the project name and information.
+Do you have impactful project? Awesome!
+
+Feel free to create a pull request editing this `README.md` file, adding the project name and information. Alternatively, you can use this [online form](https://meaningfulcode.org/submit-project) to submit a project.
 
 To be accepted, the project needs to align with the following criteria:
 
