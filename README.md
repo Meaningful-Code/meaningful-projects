@@ -534,3 +534,8 @@ To be accepted, the project needs to align with the following criteria:
   - **Categories**: environment
   - **Description**: Using U-Net Model to Detect Wildfire from Satellite Imagery
   - **Website URL**:
+
+- **[themeselection/vue-cheatsheet](https://github.com/themeselection/vue-cheatsheet)**:
+  - **Categories**: education
+  - **Description**: The only Vue CheatSheet you will ever need whether you are using Vue, Vue Router & Pinia in your Vue project or starting a new Vue project.
+  - **Website URL**: https://vue-cheatsheet.themeselection.com/
