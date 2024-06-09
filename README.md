@@ -110,6 +110,12 @@ To be accepted, the project needs to align with the following criteria:
   - **Description**: A very simple CNN project.
   - **Website URL**:
 
+- **[GNOME/orca](https://github.com/GNOME/orca)**:
+
+  - **Categories**: accessibility
+  - **Description**: Read-only mirror of https://gitlab.gnome.org/GNOME/orca
+  - **Website URL**: https://gitlab.gnome.org/GNOME/orca
+
 - **[HTBox/allReady](https://github.com/HTBox/allReady)**:
 
   - **Categories**: humanitarian
@@ -289,6 +295,12 @@ To be accepted, the project needs to align with the following criteria:
   - **Categories**: society
   - **Description**: Synapse: Matrix homeserver written in Python/Twisted.
   - **Website URL**: https://element-hq.github.io/synapse
+
+- **[espeak-ng/espeak-ng](https://github.com/espeak-ng/espeak-ng)**:
+
+  - **Categories**: accessibility
+  - **Description**: eSpeak NG is an open source speech synthesizer that supports more than hundred languages and accents.
+  - **Website URL**:
 
 - **[grey-software/Material-Math](https://github.com/grey-software/material-math)**:
 
