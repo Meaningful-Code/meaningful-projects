@@ -1,11 +1,7 @@
-# Convert an input JSON project list file to a markdown
-
-import json
 import re
-import sys
-from typing import List, Dict, Optional
+from typing import Any, Dict, List, Optional
 
-supported_categories = (
+CATEGORIES = (
     "environment",
     "health",
     "society",
@@ -13,6 +9,8 @@ supported_categories = (
     "humanitarian",
     "accessibility",
 )
+
+PROJECTS_TITLE = "## Impactful Project List"
 
 
 def read_markdown_file(file_path: str) -> str:
@@ -59,7 +57,7 @@ def parse_single_project(block: str) -> Dict[str, Optional[str]]:
         value = value.strip()
         if attribute == "categories":
             categories = [cat.strip() for cat in value.split(",")]
-            if not all(map(lambda cat: cat in supported_categories, categories)):
+            if not all(map(lambda cat: cat in CATEGORIES, categories)):
                 raise ValueError(
                     f'Invalid categories "{categories}" for project "{owner}/{name}"'
                 )
@@ -69,13 +67,27 @@ def parse_single_project(block: str) -> Dict[str, Optional[str]]:
     return project
 
 
-def parse_markdown_to_json(markdown_text: str) -> List[Dict[str, Optional[str]]]:
+def find_project_title(markdown_text: str) -> Optional[int]:
+    """Finds the index of the project title in the markdown text."""
+    project_start = markdown_text.find(PROJECTS_TITLE)
+    return project_start if project_start != -1 else None
+
+
+def get_markdown_project_header(markdown_text: str) -> str:
+    """Returns the text present before the project list in the markdown text."""
+    project_start = find_project_title(markdown_text)
+    if project_start is None:
+        raise ValueError(f"Failed to find anchor text '{PROJECTS_TITLE}'")
+
+    return markdown_text[:project_start]
+
+
+def parse_markdown_projects(markdown_text: str) -> List[Dict[str, Optional[str]]]:
     """Parses Markdown text to a list of dictionaries representing project data."""
     projects: List[Dict[str, Optional[str]]] = []
-    anchor_text = "# Impactful Project List"
-    project_start = markdown_text.find(anchor_text)
-    if project_start == -1:
-        raise ValueError(f"Failed to find anchor text '{anchor_text}'")
+    project_start = find_project_title(markdown_text)
+    if project_start is None:
+        raise ValueError(f"Failed to find anchor text '{PROJECTS_TITLE}'")
 
     markdown_text = markdown_text[project_start:]
     project_blocks = markdown_text.split("\n- **")
@@ -87,18 +99,39 @@ def parse_markdown_to_json(markdown_text: str) -> List[Dict[str, Optional[str]]]
     return projects
 
 
-def main():
-    if len(sys.argv) != 2:
-        sys.exit("Usage: python projects-markdown-to-json.py <path_to_markdown_file>")
+def generate_markdown_project(data: Dict[str, Any]) -> str:
+    """Generates a markdown string for a single project.
 
-    try:
-        file_path = sys.argv[1]
-        markdown_text = read_markdown_file(file_path)
-        projects_json = parse_markdown_to_json(markdown_text)
-        print(json.dumps(projects_json, indent=4))
-    except Exception as e:
-        sys.exit(f"An error occurred: {e}")
+    Args:
+        data (Dict[str, Any]): Dictionary containing project data.
+
+    Returns:
+        str: A markdown formatted string for the project.
+    """
+
+    def value_or_empty(value):
+        return value if value else ""
+
+    website = value_or_empty(data.get("websiteUrl"))
+    return (
+        f"- **[{data['owner']}/{data['name']}]({data['url']})**:\n\n"
+        f"  - **Categories**: {', '.join([cat.strip() for cat in data['categories']])}\n"
+        f"  - **Description**: {value_or_empty(data.get('description')).strip()}\n"
+        f"  - **Website URL**:{' ' + website if website else ''}\n"
+    )
 
 
-if __name__ == "__main__":
-    main()
+def generate_markdown_list(project_list: List[Dict[str, Any]]) -> str:
+    """Generates a markdown formatted list from the data.
+
+    Args:
+        project_list (List[Dict[str, Any]]): A list of dictionaries containing project data.
+
+    Returns:
+        str: A markdown formatted string representing the list of projects.
+    """
+    # Convert each project to a Markdown list item
+    markdown_list = ["## Impactful Project List\n"] + [
+        generate_markdown_project(data) for data in project_list
+    ]
+    return "\n".join(markdown_list)
