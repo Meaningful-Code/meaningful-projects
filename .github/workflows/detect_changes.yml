@@ -1,4 +1,4 @@
-name: Update README
+name: Update README.md from project changes
 
 on:
   schedule:
@@ -22,7 +22,9 @@ jobs:
         run: curl -o projects.json https://meaningfulcode.org/api/projects
 
       - name: Convert to README.md
-        run: python project.py --to-readme --ref-readme README.md projects.json > README.md
+        run: |
+          python projects.py --to-readme --ref-readme README.md projects.json > README.md.new
+          mv README.md{.new,}
 
       - name: Check for README.md changes
         id: check_changes
