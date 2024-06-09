@@ -62,12 +62,6 @@ To be accepted, the project needs to align with the following criteria:
   - **Description**: TakeTwo solution provides a quick and simple tool for media creators and media consumers to be more vigilant to detect and eliminate racial bias (both overt and subtle) in their content
   - **Website URL**:
 
-- **[Call-for-Code/ClusterDuck-Protocol](https://github.com/Call-for-Code/ClusterDuck-Protocol)**:
-
-  - **Categories**: society
-  - **Description**: Firmware for an ad-hoc mesh network of Internet-of-Things devices based on LoRa (Long Range radio) that can be deployed quickly and at low cost.
-  - **Website URL**: https://clusterduckprotocol.org
-
 - **[Call-for-Code/DroneAid](https://github.com/Call-for-Code/DroneAid)**:
 
   - **Categories**: society
@@ -79,6 +73,12 @@ To be accepted, the project needs to align with the following criteria:
   - **Categories**: environment
   - **Description**: Liquid Prep offers an end-to-end solution for farmers looking to optimize their water usage, especially during times of drought.
   - **Website URL**:
+
+- **[ClusterDuck-Protocol/ClusterDuck-Protocol](https://github.com/Call-for-Code/ClusterDuck-Protocol)**:
+
+  - **Categories**: society
+  - **Description**: Firmware for an ad-hoc mesh network of Internet-of-Things devices based on LoRa (Long Range radio) that can be deployed quickly and at low cost.
+  - **Website URL**: https://clusterduckprotocol.org
 
 - **[CroceRossaItaliana/jorvik](https://github.com/CroceRossaItaliana/jorvik)**:
 
@@ -150,7 +150,7 @@ To be accepted, the project needs to align with the following criteria:
 
   - **Categories**: society
   - **Description**: Frontend code for https://meaningfulcode.org, to promote open source projects with a social impact, that people can contribute to.
-  - **Website URL**:
+  - **Website URL**: https://meaningfulcode.org
 
 - **[NMF-earth/nmf-app](https://github.com/NMF-earth/nmf-app)**:
 
@@ -174,7 +174,7 @@ To be accepted, the project needs to align with the following criteria:
 
   - **Categories**: education
   - **Description**: The Physics Hub is an open source physics simulations project that is being developed by physics students worldwide and aims to deliver clear and easy to understand physics simulations free for everyone!
-  - **Website URL**: https://physicshub.herokuapp.com/
+  - **Website URL**: https://physicsub-198fbf007acd.herokuapp.com/
 
 - **[OpenTreeMap/otm-core](https://github.com/OpenTreeMap/otm-core)**:
 
@@ -290,12 +290,6 @@ To be accepted, the project needs to align with the following criteria:
   - **Description**: Synapse: Matrix homeserver written in Python/Twisted.
   - **Website URL**: https://element-hq.github.io/synapse
 
-- **[github/covid19-dashboard](https://github.com/github/covid19-dashboard)**:
-
-  - **Categories**: health
-  - **Description**: A site that displays up to date COVID-19 stats, powered by fastpages.
-  - **Website URL**: https://covid19dashboards.com
-
 - **[grey-software/Material-Math](https://github.com/grey-software/material-math)**:
 
   - **Categories**: education
@@ -401,7 +395,7 @@ To be accepted, the project needs to align with the following criteria:
 - **[noodle-run/noodle](https://github.com/noodle-run/noodle)**:
 
   - **Categories**: education
-  - **Description**: Open Source Education Platform
+  - **Description**: Rethinking Student Productivity
   - **Website URL**: https://noodle.run
 
 - **[nvaccess/nvda](https://github.com/nvaccess/nvda)**:
@@ -426,7 +420,7 @@ To be accepted, the project needs to align with the following criteria:
 
   - **Categories**: society
   - **Description**: The new Open Food Facts mobile application for Android and iOS, crafted with Flutter and Dart
-  - **Website URL**: https://openfoodfacts.github.io/smoothielanding/
+  - **Website URL**: https://world.openfoodfacts.org/open-food-facts-mobile-app?utm_source=off&utf_medium=web&utm_campaign=github-repo
 
 - **[openfoodfoundation/openfoodnetwork](https://github.com/openfoodfoundation/openfoodnetwork)**:
 
@@ -498,7 +492,7 @@ To be accepted, the project needs to align with the following criteria:
 
   - **Categories**: education
   - **Description**: Graphical User Interface for creating and running Scratch 3.0 projects.
-  - **Website URL**: https://llk.github.io/scratch-gui/develop/
+  - **Website URL**: https://scratchfoundation.github.io/scratch-gui/develop/
 
 - **[scratchfoundation/scratch-www](https://github.com/scratchfoundation/scratch-www)**:
 
@@ -531,6 +525,7 @@ To be accepted, the project needs to align with the following criteria:
   - **Website URL**: http://ushahidi.com
 
 - **[yueureka/WildFireDetection](https://github.com/yueureka/WildFireDetection)**:
+
   - **Categories**: environment
   - **Description**: Using U-Net Model to Detect Wildfire from Satellite Imagery
   - **Website URL**:
