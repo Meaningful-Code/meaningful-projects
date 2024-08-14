@@ -155,7 +155,7 @@ To be accepted, the project needs to align with the following criteria:
 - **[Meaningful-Code/meaningfulcode-frontend](https://github.com/Meaningful-Code/meaningfulcode-frontend)**:
 
   - **Categories**: society
-  - **Description**: Frontend code for https://meaningfulcode.org, to promote open source projects with a social impact, that people can contribute to.
+  - **Description**: Frontend for https://meaningfulcode.org, promoting open-source for good projects to contribute to.
   - **Website URL**: https://meaningfulcode.org
 
 - **[NMF-earth/nmf-app](https://github.com/NMF-earth/nmf-app)**:
