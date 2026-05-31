@@ -410,6 +410,12 @@ To be accepted, the project needs to align with the following criteria:
   - **Description**: Rethinking Student Productivity
   - **Website URL**: https://noodle.run
 
+- **[nopara73/LongevityWorldCup](https://github.com/nopara73/LongevityWorldCup)**:
+
+  - **Categories**: health
+  - **Description**: Open-source longevity sport platform with biological-age calculators, athlete profiles, public leaderboards, and machine-readable longevity data.
+  - **Website URL**: https://longevityworldcup.com/
+
 - **[nvaccess/nvda](https://github.com/nvaccess/nvda)**:
 
   - **Categories**: accessibility
